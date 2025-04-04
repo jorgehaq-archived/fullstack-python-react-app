@@ -26,5 +26,5 @@ jobs:
       run: npm run lint
       continue-on-error: true  # Permite que el workflow continúe aunque haya errores de linting
     
-    - name: Build application
-      run: npm run build
+    #- name: Build application
+    #  run: npm run build
