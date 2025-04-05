@@ -48,3 +48,46 @@
     .vscode/
     *.swp
     *.swo
+
+
+
+
+# Carpetas y archivos comunes a ignorar
+.git
+.github
+.gitignore
+README.md
+LICENSE
+docs
+
+# Backend (Python)
+backend/__pycache__/
+backend/venv/
+backend/.env
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/env/
+backend/pip-log.txt
+backend/.coverage
+backend/htmlcov/
+backend/.tox/
+backend/.nox/
+backend/.pytest_cache/
+backend/coverage.xml
+backend/*.cover
+
+# Frontend (React)
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/coverage/
+
+
