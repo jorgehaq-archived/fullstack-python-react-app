@@ -4,7 +4,7 @@ from typing import List
 
 from app.domain.orders.entities import OrderItem
 from app.domain.orders.services import OrderService
-from app.api.graphql.types.order_types import Order as OrderType, OrderItemInput
+from backend.app.api.graphql.types.orders.order_types import Order as OrderType, OrderItemInput
 from app.config.dependencies import get_order_service
 
 @strawberry.type
