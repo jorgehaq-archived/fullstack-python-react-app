@@ -1,12 +1,11 @@
-# api/graphql/order_mutations.py
-
 import strawberry
 from uuid import UUID
 from typing import List
 
+from app.domain.orders.entities import OrderItem
 from app.domain.orders.services import OrderService
-from app.domain.orders.entities import Order, OrderItem
-from .types import OrderType, OrderItemInput
+from backend.app.api.graphql.types.orders.order_types import Order as OrderType, OrderItemInput
+from app.config.dependencies import get_order_service
 
 @strawberry.type
 class OrderMutations:
@@ -15,7 +14,7 @@ class OrderMutations:
         self, 
         user_id: str, 
         items: List[OrderItemInput],
-        order_service: OrderService
+        order_service: OrderService = Depends(get_order_service)
     ) -> OrderType:
         # Convertir de tipo GraphQL a entidad de dominio
         domain_items = [
