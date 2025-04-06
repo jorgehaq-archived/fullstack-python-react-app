@@ -1,0 +1,3 @@
+- El `OrderService` (módulo de alto nivel) depende de interfaces, no de implementaciones concretas
+- La inversión se logra haciendo que tanto los servicios (alto nivel) como los repositorios y otras implementaciones (bajo nivel) dependan de las interfaces
+- Las dependencias se inyectan a través del constructor, facilitando pruebas y flexibilidad
